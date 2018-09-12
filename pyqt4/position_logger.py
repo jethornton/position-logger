@@ -33,10 +33,10 @@ class MyWindow(QMainWindow):
 	def setupGUI(self):
 		self.positionCB.addItem('Reletive', 'positionReletive')
 		self.positionCB.addItem('Machine', 'positionMachine')
-		print self.s.axes
+
+		# check axes that are and disable axes that are not
 		axisMask = self.s.axis_mask
 		axisList = [1, 2, 4, 8, 16, 32, 64, 128, 256]
-		#axes = []
 		possibleAxes = []
 		for axis in axisList:
 			if axis <= self.s.axis_mask:
@@ -47,10 +47,11 @@ class MyWindow(QMainWindow):
 				axesList.append(max(possibleAxes))
 				axisMask = axisMask - max(possibleAxes)
 			possibleAxes.remove(max(possibleAxes))
-		print axesList
 		for axis in axesList:
-			print axis
+			axisList.remove(axis)
 			getattr(self, 'axisCB_' + str(axis)).setChecked(True)
+		for axis in axisList:
+			getattr(self, 'axisCB_' + str(axis)).setEnabled(False)
 
 
 	def exit(self):
