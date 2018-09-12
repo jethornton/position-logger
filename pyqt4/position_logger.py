@@ -23,13 +23,35 @@ class MyWindow(QMainWindow):
 			exit()
 		projectPath = os.path.abspath(os.path.dirname(sys.argv[0]))
 		uic.loadUi(os.path.join(projectPath, 'position_logger.ui'), self)
-		self.show()
-		self.positionCB.addItem('Reletive', 'positionReletive')
-		self.positionCB.addItem('Machine', 'positionMachine')
+		self.setupGUI()
 		self.setupConnections()
+		self.show()
 
 	def setupConnections(self):
 		self.actionExit.triggered.connect(self.exit)
+
+	def setupGUI(self):
+		self.positionCB.addItem('Reletive', 'positionReletive')
+		self.positionCB.addItem('Machine', 'positionMachine')
+		print self.s.axes
+		axisMask = self.s.axis_mask
+		axisList = [1, 2, 4, 8, 16, 32, 64, 128, 256]
+		#axes = []
+		possibleAxes = []
+		for axis in axisList:
+			if axis <= self.s.axis_mask:
+				possibleAxes.append(axis)
+		axesList = []
+		for i in range(len(possibleAxes)):
+			if max(possibleAxes) <= axisMask:
+				axesList.append(max(possibleAxes))
+				axisMask = axisMask - max(possibleAxes)
+			possibleAxes.remove(max(possibleAxes))
+		print axesList
+		for axis in axesList:
+			print axis
+			getattr(self, 'axisCB_' + str(axis)).setChecked(True)
+
 
 	def exit(self):
 		exit()

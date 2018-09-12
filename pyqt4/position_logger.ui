@@ -60,7 +60,7 @@
      </widget>
     </item>
     <item row="5" column="0">
-     <widget class="QCheckBox" name="checkBox_5">
+     <widget class="QCheckBox" name="axisCB_32">
       <property name="text">
        <string>C</string>
       </property>
@@ -101,7 +101,7 @@
      </widget>
     </item>
     <item row="0" column="0">
-     <widget class="QCheckBox" name="checkBox">
+     <widget class="QCheckBox" name="axisCB_1">
       <property name="text">
        <string>X</string>
       </property>
@@ -142,21 +142,21 @@
      </widget>
     </item>
     <item row="4" column="0">
-     <widget class="QCheckBox" name="checkBox_6">
+     <widget class="QCheckBox" name="axisCB_16">
       <property name="text">
        <string>B</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QCheckBox" name="checkBox_8">
+     <widget class="QCheckBox" name="axisCB_4">
       <property name="text">
        <string>Z</string>
       </property>
      </widget>
     </item>
     <item row="8" column="0">
-     <widget class="QCheckBox" name="checkBox_2">
+     <widget class="QCheckBox" name="axisCB_256">
       <property name="text">
        <string>W</string>
       </property>
@@ -251,28 +251,28 @@
      </widget>
     </item>
     <item row="3" column="0">
-     <widget class="QCheckBox" name="checkBox_7">
+     <widget class="QCheckBox" name="axisCB_8">
       <property name="text">
        <string>A</string>
       </property>
      </widget>
     </item>
     <item row="7" column="0">
-     <widget class="QCheckBox" name="checkBox_3">
+     <widget class="QCheckBox" name="axisCB_128">
       <property name="text">
        <string>V</string>
       </property>
      </widget>
     </item>
     <item row="6" column="0">
-     <widget class="QCheckBox" name="checkBox_4">
+     <widget class="QCheckBox" name="axisCB_64">
       <property name="text">
        <string>U</string>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QCheckBox" name="checkBox_9">
+     <widget class="QCheckBox" name="axisCB_2">
       <property name="text">
        <string>Y</string>
       </property>
