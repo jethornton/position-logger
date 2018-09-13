@@ -35,7 +35,6 @@ class MyWindow(QMainWindow):
 		self.positionCB.addItem('Machine', 'positionMachine')
 
 		# check axes that are and disable axes that are not
-        #  axes = [(i) for i in range(9)if mask & (1<<i)]
 		axisMask = self.s.axis_mask
         axes = [(i) for i in range(9)if axisMask & (1<<i)]
         for i in range(9):
