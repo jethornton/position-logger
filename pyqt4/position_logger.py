@@ -36,11 +36,11 @@ class MyWindow(QMainWindow):
 
 		# check axes that are and disable axes that are not
 		axisMask = self.s.axis_mask
-        axes = [(i) for i in range(9)if axisMask & (1<<i)]
-        for i in range(9):
-            getattr(self, 'axisCB_' + str(i)).setChecked(i in axes)
-        
-        """
+		axes = [(i) for i in range(9)if axisMask & (1<<i)]
+		for i in range(9):
+			getattr(self, 'axisCB_' + str(i)).setChecked(i in axes)
+
+		"""
 		axisList = [1, 2, 4, 8, 16, 32, 64, 128, 256]
 		possibleAxes = []
 		for axis in axisList:
