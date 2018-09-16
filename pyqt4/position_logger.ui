@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>792</width>
-    <height>600</height>
+    <height>632</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,83 +15,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="11" column="2">
-     <widget class="QGroupBox" name="gridGroupBox_2">
-      <property name="title">
-       <string>Move Type</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="3">
-        <widget class="QRadioButton" name="radioButton_4">
-         <property name="text">
-          <string>G3 CCW Arc</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QRadioButton" name="radioButton_2">
-         <property name="text">
-          <string>G1 Feed</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QRadioButton" name="radioButton_3">
-         <property name="text">
-          <string>G2 CW Arc</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QRadioButton" name="radioButton">
-         <property name="text">
-          <string>G0 Rapid</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="4">
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>Log</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QCheckBox" name="axisCB_5">
-      <property name="text">
-       <string>C</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLabel" name="positionLB_1">
-      <property name="minimumSize">
-       <size>
-        <width>75</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="9" column="0" colspan="2">
+    <item row="10" column="0" colspan="2">
      <widget class="QGroupBox" name="gridGroupBox">
       <property name="title">
        <string>Position</string>
@@ -103,266 +27,19 @@
       </layout>
      </widget>
     </item>
-    <item row="0" column="0">
-     <widget class="QCheckBox" name="axisCB_0">
-      <property name="text">
-       <string>X</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLabel" name="positionLB_0">
-      <property name="minimumSize">
-       <size>
-        <width>75</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="12" column="2">
-     <widget class="QGroupBox" name="gridGroupBox">
-      <property name="title">
-       <string>Extra G code</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
-        <widget class="QLineEdit" name="lineEdit_2"/>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QCheckBox" name="axisCB_4">
-      <property name="text">
-       <string>B</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QCheckBox" name="axisCB_2">
-      <property name="text">
-       <string>Z</string>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="0">
-     <widget class="QCheckBox" name="axisCB_8">
-      <property name="text">
-       <string>W</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QLabel" name="positionLB_3">
-      <property name="minimumSize">
-       <size>
-        <width>75</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QLabel" name="positionLB_5">
-      <property name="minimumSize">
-       <size>
-        <width>75</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLabel" name="positionLB_4">
-      <property name="minimumSize">
-       <size>
-        <width>75</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLabel" name="positionLB_2">
-      <property name="minimumSize">
-       <size>
-        <width>75</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QCheckBox" name="axisCB_3">
-      <property name="text">
-       <string>A</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="0">
-     <widget class="QCheckBox" name="axisCB_7">
-      <property name="text">
-       <string>V</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QCheckBox" name="axisCB_6">
-      <property name="text">
-       <string>U</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QCheckBox" name="axisCB_1">
-      <property name="text">
-       <string>Y</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QLabel" name="positionLB_6">
-      <property name="minimumSize">
-       <size>
-        <width>75</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QLabel" name="positionLB_7">
-      <property name="minimumSize">
-       <size>
-        <width>75</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="8" column="1">
-     <widget class="QLabel" name="positionLB_8">
-      <property name="minimumSize">
-       <size>
-        <width>75</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item row="10" column="0" colspan="2">
+    <item row="11" column="0" colspan="2">
      <widget class="QGroupBox" name="gridGroupBox">
       <property name="title">
        <string>Feed Rate</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
-        <widget class="QLineEdit" name="lineEdit"/>
+        <widget class="QLineEdit" name="feedLE"/>
        </item>
       </layout>
      </widget>
     </item>
-    <item row="0" column="2" rowspan="11">
-     <widget class="QListWidget" name="listWidget"/>
-    </item>
-    <item row="11" column="0" colspan="2">
+    <item row="12" column="0" colspan="2">
      <widget class="QGroupBox" name="gridGroupBox">
       <property name="title">
        <string>Units</string>
@@ -374,7 +51,392 @@
       </layout>
      </widget>
     </item>
-    <item row="12" column="0" colspan="2">
+    <item row="0" column="0" rowspan="10" colspan="2">
+     <widget class="QGroupBox" name="axesGB">
+      <property name="title">
+       <string>Axes</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="1">
+        <widget class="QLabel" name="positionLB_0">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="positionLB_2">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="positionLB_3">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QCheckBox" name="axisCB_4">
+         <property name="text">
+          <string>B</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="axisCB_2">
+         <property name="text">
+          <string>Z</string>
+         </property>
+         <property name="axis" stdset="0">
+          <string> Z</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLabel" name="positionLB_6">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="axisCB_1">
+         <property name="text">
+          <string>Y</string>
+         </property>
+         <property name="axis" stdset="0">
+          <string> Y</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="positionLB_1">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="axisCB_3">
+         <property name="text">
+          <string>A</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="axisCB_0">
+         <property name="text">
+          <string>X</string>
+         </property>
+         <property name="axis" stdset="0">
+          <string> X</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QCheckBox" name="axisCB_6">
+         <property name="text">
+          <string>U</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="positionLB_4">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QCheckBox" name="axisCB_5">
+         <property name="text">
+          <string>C</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLabel" name="positionLB_5">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QCheckBox" name="axisCB_7">
+         <property name="text">
+          <string>V</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLabel" name="positionLB_7">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QCheckBox" name="axisCB_8">
+         <property name="text">
+          <string>W</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLabel" name="positionLB_8">
+         <property name="minimumSize">
+          <size>
+           <width>75</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="12" column="2" rowspan="2">
+     <widget class="QGroupBox" name="moveGB">
+      <property name="title">
+       <string>Move Type</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="3">
+        <widget class="QRadioButton" name="g3RB">
+         <property name="text">
+          <string>G3 CCW Arc</string>
+         </property>
+         <property name="gcode" stdset="0">
+          <string>G3</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QRadioButton" name="g1RB">
+         <property name="text">
+          <string>G1 Feed</string>
+         </property>
+         <property name="gcode" stdset="0">
+          <string>G1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QRadioButton" name="g2RB">
+         <property name="text">
+          <string>G2 CW Arc</string>
+         </property>
+         <property name="gcode" stdset="0">
+          <string>G2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QRadioButton" name="g0RB">
+         <property name="text">
+          <string>G0 Rapid</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="gcode" stdset="0">
+          <string>G0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QPushButton" name="logPB">
+         <property name="text">
+          <string>Log</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="14" column="2">
+     <widget class="QGroupBox" name="gridGroupBox">
+      <property name="title">
+       <string>Extra G code</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLineEdit" name="extraLE"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="addExtraPB">
+         <property name="text">
+          <string>Add</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="2" rowspan="12" colspan="2">
+     <widget class="QListWidget" name="gcodeList"/>
+    </item>
+    <item row="12" column="3">
+     <widget class="QGroupBox" name="gridGroupBox">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Arc Radius</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="0" column="0">
+        <widget class="QLineEdit" name="arcRadiusLE">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="13" column="0" rowspan="2" colspan="2">
      <widget class="QGroupBox" name="gridGroupBox">
       <property name="title">
        <string>Precision</string>
@@ -391,6 +453,13 @@
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item row="14" column="3">
+     <widget class="QPushButton" name="testPB">
+      <property name="text">
+       <string>Test</string>
+      </property>
      </widget>
     </item>
    </layout>
