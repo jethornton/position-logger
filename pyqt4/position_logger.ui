@@ -516,6 +516,7 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionCopy"/>
    <addaction name="actionExit"/>
   </widget>
   <action name="actionNew">
@@ -574,6 +575,11 @@
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
+   </property>
+  </action>
+  <action name="actionSendToAxis">
+   <property name="text">
+    <string>Send to Axis</string>
    </property>
   </action>
  </widget>

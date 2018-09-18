@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import os, sys
+import os, sys, math
 import linuxcnc
 # This needs to be done once at the beginning of your program,
 # before the other PyQt modules are imported, and will ensure that
@@ -9,9 +9,9 @@ import sip
 sip.setapi('QVariant', 2)
 
 from PyQt4 import uic
-from PyQt4.QtGui import *
+from PyQt4.QtGui import (QApplication, QMainWindow, QCheckBox, QRadioButton,
+QMessageBox)
 from PyQt4.QtCore import Qt, QTimer
-
 
 class MyWindow(QMainWindow):
 	def __init__(self):
@@ -30,12 +30,14 @@ class MyWindow(QMainWindow):
 			exit()
 		projectPath = os.path.abspath(os.path.dirname(sys.argv[0]))
 		uic.loadUi(os.path.join(projectPath, 'position_logger.ui'), self)
+		self.qclip = QApplication.clipboard()
 		self.axes = [(i) for i in range(9)if self.s.axis_mask & (1<<i)]
 		self.setupGUI()
 		self.setupConnections()
 		self.timer = QTimer()
 		self.timer.timeout.connect(self.update)
 		self.timer.start(100)
+		self.lastPosition = []
 		self.show()
 
 
@@ -44,7 +46,7 @@ class MyWindow(QMainWindow):
 		self.logPB.clicked.connect(self.log)
 		self.addExtraPB.clicked.connect(self.addExtra)
 		self.testPB.clicked.connect(self.test)
-
+		self.actionCopy.triggered.connect(self.copy)
 
 	def setupGUI(self):
 		self.positionCB.addItem('Relative', 'relative')
@@ -61,6 +63,7 @@ class MyWindow(QMainWindow):
 				axes.insert(0, str(checkbox.objectName()[-1]))
 
 		gcode = []
+		currentPosition = []
 		for radio in self.moveGB.findChildren(QRadioButton):
 			if radio.isChecked(): # add the move type
 				gcode.append(str(radio.property('gcode')) + ' ')
@@ -68,14 +71,45 @@ class MyWindow(QMainWindow):
 		for axis in axes: # add each axis position
 			axisLetter = str(getattr(self, 'axisCB_' + axis).property('axis'))
 			position = str(getattr(self, 'positionLB_' + axis).text())
+			currentPosition.append(float(position))
 			gcode.append(axisLetter + position)
 
+		if moveType in ['G2', 'G3']:
+			if self.arcRadiusLE.text() == '':
+				self.mbox('{} moves require an arc radius'.format(moveType))
+				return
+			if len(self.lastPosition) == 0:
+				self.mbox('A G0 or G1 move must be done before a {} move'
+				.format(moveType))
+			x1 = self.lastPosition[0]
+			x2 = currentPosition[0]
+			y1 = self.lastPosition[1]
+			y2 = currentPosition[1]
+			if x1 == x2 and y1 == y2:
+				self.mbox('{} move needs a different end point'.format(moveType))
+				return
+			xMid = (x1 + x2) / 2
+			yMid = (y1 + y2) / 2
+			slope = (y2 - y1) / (x2 - x1)
+			distance = math.sqrt(pow((x1 - x2),2) + pow((y1 - y2),2))
+			radius = float(self.arcRadiusLE.text())
+			if radius < (distance / 2):
+				self.mbox('Radius can not be smaller than {0:0.4f}'.format(distance/2))
+				return
+
+			#cosine
+			c = 1/math.sqrt(1+((slope * -1)*(slope * -1)))
+			#sine
+			s = (slope * -1)/math.sqrt(1+((slope * -1)*(slope * -1)))
+
 		if moveType == 'G2':
-			print 'G2'
-			return
+			i = xMid + radius * (c)
+			j = yMid + radius * (s)
+			gcode.append(' I{0:.{2}f} J{1:.{2}f}'.format(i, j, self.precisionSB.value()))
 		elif moveType == 'G3':
-			print 'G3'
-			return
+			i = xMid + (-radius) * (c)
+			j = yMid + (-radius) * (s)
+			gcode.append(' I{0:.{2}f} J{1:.{2}f}'.format(i, j, self.precisionSB.value()))
 
 		if moveType in ['G1', 'G2', 'G3']: # check for a feed rate
 			feedMatch = self.gcodeList.findItems('F', Qt.MatchContains)
@@ -111,6 +145,11 @@ class MyWindow(QMainWindow):
 			display = self.s.actual_position
 		for i in self.axes:
 			getattr(self, 'positionLB_' + str(i)).setText('{0:0.{1}f}'.format(display[i], self.precisionSB.value()))
+
+	def copy(self):
+		items = []
+		gcode = [str(self.gcodeList.item(i).text()) for i in range(self.gcodeList.count())]
+		self.qclip.setText('\n'.join(gcode))
 
 	def mbox(self, message):
 		msg = QMessageBox()
