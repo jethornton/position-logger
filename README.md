@@ -1,7 +1,7 @@
 # position-logger
 LinuxCNC Position Logger
 
-![image](position-logger.png)
+![image](/position-logger/position-logger.png)
 
 Generates G code by moving to a point in Axis then record the type of move.
 
