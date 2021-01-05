@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>792</width>
-    <height>632</height>
+    <width>801</width>
+    <height>762</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -128,6 +128,9 @@
          <property name="text">
           <string>B</string>
          </property>
+         <property name="axis" stdset="0">
+          <string>B</string>
+         </property>
         </widget>
        </item>
        <item row="2" column="0">
@@ -199,6 +202,9 @@
          <property name="text">
           <string>A</string>
          </property>
+         <property name="axis" stdset="0">
+          <string>A</string>
+         </property>
         </widget>
        </item>
        <item row="0" column="0">
@@ -214,6 +220,9 @@
        <item row="6" column="0">
         <widget class="QCheckBox" name="axisCB_6">
          <property name="text">
+          <string>U</string>
+         </property>
+         <property name="axis" stdset="0">
           <string>U</string>
          </property>
         </widget>
@@ -245,6 +254,9 @@
          <property name="text">
           <string>C</string>
          </property>
+         <property name="axis" stdset="0">
+          <string>C</string>
+         </property>
         </widget>
        </item>
        <item row="5" column="1">
@@ -274,6 +286,9 @@
          <property name="text">
           <string>V</string>
          </property>
+         <property name="axis" stdset="0">
+          <string>V</string>
+         </property>
         </widget>
        </item>
        <item row="7" column="1">
@@ -301,6 +316,9 @@
        <item row="8" column="0">
         <widget class="QCheckBox" name="axisCB_8">
          <property name="text">
+          <string>W</string>
+         </property>
+         <property name="axis" stdset="0">
           <string>W</string>
          </property>
         </widget>
@@ -469,8 +487,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>792</width>
-     <height>27</height>
+     <width>801</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
