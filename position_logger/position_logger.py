@@ -13,6 +13,8 @@ from PyQt4.QtGui import (QApplication, QMainWindow, QCheckBox, QRadioButton,
 QMessageBox)
 from PyQt4.QtCore import Qt, QTimer
 
+IN_AXIS = os.environ.has_key("AXIS_PROGRESS_BAR")
+
 class MyWindow(QMainWindow):
 	def __init__(self):
 		super(MyWindow, self).__init__()
@@ -45,7 +47,9 @@ class MyWindow(QMainWindow):
 		self.actionExit.triggered.connect(self.exit)
 		self.logPB.clicked.connect(self.log)
 		self.addExtraPB.clicked.connect(self.addExtra)
-		self.testPB.clicked.connect(self.test)
+		if IN_AXIS:
+			self.sendToAxisPB.setEnabled(True)
+		self.sendToAxisPB.clicked.connect(self.sendToAxis)
 		self.actionCopy.triggered.connect(self.copy)
 
 	def setupGUI(self):
@@ -158,6 +162,9 @@ class MyWindow(QMainWindow):
 		msg.setText(message)
 		msg.setStandardButtons(QMessageBox.Ok)
 		msg.exec_()
+
+	def sendToAxis(self):
+		sys.stdout.write(self.g_code.get(0.0, END))
 
 	def test(self):
 		#print self.gcodeList.count()

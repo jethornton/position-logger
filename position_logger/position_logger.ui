@@ -474,9 +474,12 @@
      </widget>
     </item>
     <item row="14" column="3">
-     <widget class="QPushButton" name="testPB">
+     <widget class="QPushButton" name="sendToAxisPB">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="text">
-       <string>Test</string>
+       <string>Send to Axis</string>
       </property>
      </widget>
     </item>
