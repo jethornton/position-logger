@@ -2,11 +2,6 @@
 
 import os, sys, math
 import linuxcnc
-# This needs to be done once at the beginning of your program,
-# before the other PyQt modules are imported, and will ensure that
-# a QVariant is never returned by any Qt API.
-import sip
-sip.setapi('QVariant', 2)
 
 from PyQt4 import uic
 from PyQt4.QtGui import (QApplication, QMainWindow, QCheckBox, QRadioButton,
