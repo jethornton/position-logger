@@ -1,6 +1,10 @@
 # position-logger
 LinuxCNC Position Logger
 
+Old version that uses GTK for the latest version see
+[documentation](https://jethornton.github.io/emclog/ 
+
+
 ![Screenshot](doc/images/position-logger.png)
 
 Generates G code by moving to a point in Axis then record the type of move.
